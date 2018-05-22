@@ -17,26 +17,30 @@ export class ProductListComponent implements OnInit {
     private router: Router
   ) { }
 
+
+  ngOnInit() {
+    this.getAllTheProducts();
+  }
+
+
   getAllTheProducts() {
     console.log('getting all the tasks');
     this.myService.getAllProducts()
     .subscribe((theList) => {
       this.allTheProducts = theList;
+      console.log('products are: ', this.allTheProducts);
     });
   }
 
-  deleteProduct(idArgument) {
-    this.myService.deleteProduct(idArgument)
-    .subscribe(() => {
-      this.getAllTheProducts();
-    });
-  }
+  // deleteProduct(idArgument) {
+  //   this.myService.deleteProduct(idArgument)
+  //   .subscribe(() => {
+  //     this.getAllTheProducts();
+  //   });
+  // }
 
 
 
 
-  ngOnInit() {
-    this.getAllTheProducts();
-  }
 
 }

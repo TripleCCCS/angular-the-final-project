@@ -10,6 +10,8 @@ import { Observable } from 'rxjs/Observable';
 })
 export class OuthService {
 
+currentUser: any;
+
   constructor( private http: Http) { }
 
   handleError(e) {
@@ -36,7 +38,8 @@ export class OuthService {
 
   isLoggedIn() {
     return this.http.get(`http://localhost:3000/loggedin`, { withCredentials: true })
-      .map(res => res.json())
+      .map(res => { this.currentUser = res, console.log('user in service: ', this.currentUser), res.json();
+    })
       .catch(this.handleError);
   }
 }
