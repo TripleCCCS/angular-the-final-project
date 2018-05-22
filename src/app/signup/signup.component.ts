@@ -29,4 +29,15 @@ export class SignupComponent implements OnInit {
       );
   }
 
+
+  logout() {
+    this.myService.logout()
+    .subscribe(
+    () => {this.user = null;
+      this.formInfo = {};
+    },
+    (err) => this.error = err
+  );
+  }
+
 }
