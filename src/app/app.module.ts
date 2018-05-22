@@ -6,10 +6,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProductlistService } from './services/products.service';
+import { OuthService } from './services/outh.service';
+
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -17,7 +20,7 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductDetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-
+  { path: 'profile', component: UserProfileComponent }
 ];
 
 @NgModule({
@@ -26,7 +29,8 @@ const routes: Routes = [
     ProductListComponent,
     ProductDetailsComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    UserProfileComponent
   ],
   imports: [
     HttpModule,
@@ -34,7 +38,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ProductlistService],
+  providers: [ProductlistService, OuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
