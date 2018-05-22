@@ -22,9 +22,15 @@ export class ProductListComponent implements OnInit {
     this.getAllTheProducts();
   }
 
+  getTheProduct(id) {
+    this.myService.getOneProduct(id)
+    .subscribe((responseFromService) => {
+      this.allTheProducts = responseFromService;
+    });
+  }
 
   getAllTheProducts() {
-    console.log('getting all the tasks');
+    console.log('getting the products');
     this.myService.getAllProducts()
     .subscribe((theList) => {
       this.allTheProducts = theList;
