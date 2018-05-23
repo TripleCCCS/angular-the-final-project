@@ -31,7 +31,7 @@ currentUser: any;
   }
 
   logout() {
-    return this.http.post(`http://localhost:3000/logout`, {})
+    return this.http.post(`http://localhost:3000/logout`, { withCredentials: true })
       .map(res => res.json())
       .catch(this.handleError);
   }

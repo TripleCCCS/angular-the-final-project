@@ -1,6 +1,10 @@
 <ul>
   <li *ngFor="let oneProduct of allTheProducts">
-    {{oneProduct.name}}
+      <img src="{{oneProduct.image1}}"> 
+      <a routerLink="/products/{{oneProduct._id}}"><h3>{{oneProduct.name}}</h3></a>
+<h5>{{oneProduct.color}}</h5>
+<h6>{{oneProduct.size}}</h6>
+<h4>{{oneProduct.price}}</h4>
   </li>
 
 </ul>
