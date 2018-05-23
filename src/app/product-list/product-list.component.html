@@ -1,3 +1,19 @@
+<h3>Search For Product</h3>
+<input type="text" [(ngModel)]="searchTerm" (keyup)="filterProducts()">
+
+    <div *ngFor="let product of resultsArray">
+      
+      <ul>
+        <h3>{{product.name}}</h3>
+        <h5>{{product.color}}</h5>
+        <h6>{{product.size}}</h6>
+        <h4>{{product.price}}</h4>
+        <img [src]="product.image1" [alt]="product.name">
+      </ul>
+    </div>
+
+
+
 <ul>
   <li *ngFor="let oneProduct of allTheProducts">
       <img src="{{oneProduct.image1}}"> 
