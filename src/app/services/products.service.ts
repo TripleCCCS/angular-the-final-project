@@ -15,12 +15,12 @@ export class ProductlistService {
   constructor(private myHttp: Http) { }
 
   getAllProducts() {
-    return this.myHttp.get('http://localhost:3000/products')
+    return this.myHttp.get('http://localhost:3000/product/products')
     .map((responseFromApi) => responseFromApi.json());
   }
 
-  getOneProduct(theID) {
-    return this.myHttp.get(`http://localhost:3000/${theID}`)
+  getOneProduct(theID: string) {
+    return this.myHttp.get(`http://localhost:3000/product/products/${theID}`)
     .map((responseFromApi) => responseFromApi.json());
   }
 
@@ -33,7 +33,7 @@ export class ProductlistService {
 
 
   createNewProduct(theWholeProductObject) {
-    return this.myHttp.post(`http://localhost:3000/products`, theWholeProductObject)
+    return this.myHttp.post(`http://localhost:3000/product/products`, theWholeProductObject)
     .map((responseFromApi) => responseFromApi.json());
   }
 

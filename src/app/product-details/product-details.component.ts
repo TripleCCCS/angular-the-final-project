@@ -38,7 +38,7 @@ updateTheProduct(idOfProduct) {
   ngOnInit() {
     this.route.params
     .subscribe((theParams) => {
-      const theID = theParams['id'];
+      const theID = theParams.id;
       this.getTheProduct(theID);
     });
   }
