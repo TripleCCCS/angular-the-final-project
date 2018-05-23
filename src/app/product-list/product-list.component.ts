@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import {ProductlistService} from '../services/products.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -11,6 +12,9 @@ import { Router } from '@angular/router';
 export class ProductListComponent implements OnInit {
 
   allTheProducts: Array<any> = [];
+  searchTerm: String = "";
+  resultsArray: Array<any> = [];
+  
 
   constructor(
     private myService: ProductlistService,
@@ -20,15 +24,17 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getAllTheProducts();
+    this.resultsArray = [];
   }
-
+  
+  
   getTheProduct(id) {
     this.myService.getOneProduct(id)
     .subscribe((responseFromService) => {
       this.allTheProducts = responseFromService;
     });
   }
-
+  
   getAllTheProducts() {
     console.log('getting the products');
     this.myService.getAllProducts()
@@ -37,14 +43,18 @@ export class ProductListComponent implements OnInit {
       console.log('products are: ', this.allTheProducts);
     });
   }
-
+  
+  filterProducts(){
+    this.resultsArray = this.allTheProducts.filter((product=>{
+      return product.name.toLowerCase().includes(this.searchTerm.toLowerCase());
+    }))
+  }
   // deleteProduct(idArgument) {
-  //   this.myService.deleteProduct(idArgument)
-  //   .subscribe(() => {
+    //   this.myService.deleteProduct(idArgument)
+    //   .subscribe(() => {
   //     this.getAllTheProducts();
   //   });
   // }
-
 
 
 

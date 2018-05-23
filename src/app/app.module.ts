@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'index',  component: ProductListComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
     LoginComponent,
     UserProfileComponent,
     ShoppingCartComponent
+
   ],
   imports: [
     HttpModule,
