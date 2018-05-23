@@ -3,17 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 import { ProductlistService } from './services/products.service';
 import { OuthService } from './services/outh.service';
-
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { FilterPipe } from './pipes/filter.pipe';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -32,7 +31,8 @@ const routes: Routes = [
     SignupComponent,
     LoginComponent,
     UserProfileComponent,
-    FilterPipe
+    ShoppingCartComponent
+
   ],
   imports: [
     HttpModule,
