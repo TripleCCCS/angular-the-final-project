@@ -31,6 +31,7 @@ export class ProductListComponent implements OnInit {
 
   getAllTheProducts() {
     console.log('getting the products');
+    console.log(this.allTheProducts);
     this.myService.getAllProducts()
     .subscribe((theList) => {
       this.allTheProducts = theList;
