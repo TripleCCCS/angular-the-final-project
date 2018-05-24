@@ -12,7 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { FilterPipe } from './pipes/filter.pipe'
+import { FilterPipe } from './pipes/filter.pipe';
 import { HomePageComponent } from './home-page/home-page.component';
 
 
@@ -35,7 +35,7 @@ const routes: Routes = [
     LoginComponent,
     UserProfileComponent,
     ShoppingCartComponent,
-    FilterPipe
+    FilterPipe,
     HomePageComponent
 
 
