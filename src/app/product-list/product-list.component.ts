@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
 
   allTheProducts: Array<any> = [];
   searchTerm: String = "";
-  resultsArray: Array<any> = [];
+  // resultsArray: Array<any> = [];
   
 
   constructor(
@@ -24,7 +24,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getAllTheProducts();
-    this.resultsArray = [];
+    // this.resultsArray = [];
   }
   
   
@@ -44,11 +44,11 @@ export class ProductListComponent implements OnInit {
     });
   }
   
-  filterProducts(){
-    this.resultsArray = this.allTheProducts.filter((product=>{
-      return product.name.toLowerCase().includes(this.searchTerm.toLowerCase());
-    }))
-  }
+  // filterProducts(){
+  //   this.resultsArray = this.allTheProducts.filter((product=>{
+  //     return product.name.toLowerCase().includes(this.searchTerm.toLowerCase());
+  //   }))
+  // }
   // deleteProduct(idArgument) {
     //   this.myService.deleteProduct(idArgument)
     //   .subscribe(() => {
