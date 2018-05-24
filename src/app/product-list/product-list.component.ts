@@ -12,8 +12,10 @@ import { Router } from '@angular/router';
 export class ProductListComponent implements OnInit {
 
   allTheProducts: Array<any> = [];
-  searchTerm: String = '';
-  resultsArray: Array<any> = [];
+
+  searchTerm: String = "";
+
+  
 
   constructor(
     private myService: ProductlistService,
@@ -23,7 +25,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getAllTheProducts();
-    this.resultsArray = [];
+    // this.resultsArray = [];
   }
 
   getAllTheProducts() {
@@ -36,12 +38,12 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  filterProducts() {
-    this.resultsArray = this.allTheProducts.filter((product => {
-      return product.name.toLowerCase().includes(this.searchTerm.toLowerCase());
-    }));
-  }
-
+  // deleteProduct(idArgument) {
+    //   this.myService.deleteProduct(idArgument)
+    //   .subscribe(() => {
+  //     this.getAllTheProducts();
+  //   });
+  // }
 
 
 
