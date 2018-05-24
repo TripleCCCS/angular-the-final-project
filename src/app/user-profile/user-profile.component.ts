@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OuthService } from '../services/outh.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -13,29 +14,13 @@ user: any;
 isFormShowing: Boolean = false;
 newCard: any = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
 cardList: Array <any> = [];
+savedCard: Array<any> = [];
 
 toggleForm() {
   this.isFormShowing = !this.isFormShowing;
 }
 
-  constructor( private myService: OuthService ) { }
-
-  addNewCard() {
-    const theNewCard = {
-      name: this.newCard.name,
-      cardnumber: this.newCard.cardnumber,
-      cardexp: this.newCard.cardexp,
-      cvv: this.newCard.cvv,
-      mailing_address: this.newCard.mailing_address,
-      city: this.newCard.city,
-      state: this.newCard.state,
-      zip: this.newCard.zip
-    };
-    this.cardList.unshift(theNewCard);
-    this.newCard = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
-    this.isFormShowing = false;
-  }
-
+  constructor( private myService: OuthService, private myRouter: Router ) { }
 
   ngOnInit() {
     this.myService.isLoggedIn()
@@ -47,5 +32,23 @@ toggleForm() {
     .catch();
 
   }
+
+  addNewCard(newCard) {
+    // console.log('am i here?');
+    this.myService.cardInfo(this.newCard)
+    .toPromise()
+    .then( newCard => {
+      console.log('card in the TS file: ', newCard);
+      this.newCard = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
+      this.myRouter.navigate(['/profile']);
+    } )
+    .catch( err => {
+      console.log('err in component when saving card ', err);
+    });
+  }
+
+  // addToList(theCard) {
+  //   this.savedCard.unshift(theCard);
+  // }
 
 }
