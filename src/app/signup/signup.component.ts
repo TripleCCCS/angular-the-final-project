@@ -8,7 +8,7 @@ import { OuthService } from '../services/outh.service';
 })
 export class SignupComponent implements OnInit {
 
-  formInfo: any = {username: '', password: ''};
+  formInfo: any = {name: '', password: '', email: '', address: '', city: '',  state: '', zip: ''};
 
   user: any;
 
@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
+    console.log('signup form: ', this.formInfo);
     this.myService.signup(this.formInfo)
       .subscribe(
         (user) => {this.user = user;

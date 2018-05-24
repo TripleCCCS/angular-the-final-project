@@ -13,8 +13,8 @@ export class UserProfileComponent implements OnInit {
 user: any;
 isFormShowing: Boolean = false;
 newCard: any = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
-cardList: Array <any> = [];
-savedCard: Array<any> = [];
+cardsList: Array <any> = [];
+// savedCard: Array<any> = [];
 
 toggleForm() {
   this.isFormShowing = !this.isFormShowing;
@@ -30,15 +30,15 @@ toggleForm() {
       console.log('user in the component: ', this.user);
     })
     .catch();
-
+    this.showTheCards();
   }
 
   addNewCard(newCard) {
-    // console.log('am i here?');
+    console.log('am i here? =======', this.newCard);
     this.myService.cardInfo(this.newCard)
     .toPromise()
-    .then( newCard => {
-      console.log('card in the TS file: ', newCard);
+    .then( () => {
+      // console.log('card in the TS file: ', newCard);
       this.newCard = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
       this.myRouter.navigate(['/profile']);
     } )
@@ -47,8 +47,12 @@ toggleForm() {
     });
   }
 
-  // addToList(theCard) {
-  //   this.savedCard.unshift(theCard);
-  // }
+  showTheCards() {
+    this.myService.getTheCards()
+    .subscribe( arrayOfCards => {
+      this.cardsList = arrayOfCards;
+      // console.log('array in the component: ', arrayOfCards );
+    });
+  }
 
 }
