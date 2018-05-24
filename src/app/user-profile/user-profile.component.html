@@ -22,10 +22,10 @@
       <i class="fa fa-cc-discover" style="color:orange;"></i>
     </div>
     <label for="cname">Name on Card</label>
-    <input type="text" id="cname" [(ngModel)]="newCard.name" name="cardname" placeholder="John More Doe">
+    <input type="text" id="cname" [(ngModel)]="newCard.cardname" name="cardname" placeholder="John More Doe">
     <br>
     <label for="ccnum">Credit card number</label>
-    <input type="text" id="ccnum" [(ngModel)]="newCard.number" name="cardnumber" placeholder="1111-2222-3333-4444">
+    <input type="text" id="ccnum" [(ngModel)]="newCard.cardnumber" name="cardnumber" placeholder="1111-2222-3333-4444">
     <br>
     <label for="expmonth">Expiration</label>
     <input type="text" id="expmonth" [(ngModel)]="newCard.cardexp" name="cardexp" placeholder="September">
@@ -40,7 +40,7 @@
         <input type="text" id="city" [(ngModel)]="newCard.city" name="city" placeholder="New York" required="required">
         <br>
         <label for="state">State</label>
-        <input type="text" id="state" [(ngModel)]="newCard.mailing_state" name="state" placeholder="NY" required="required">
+        <input type="text" id="state" [(ngModel)]="newCard.state" name="state" placeholder="NY" required="required">
         <br>
       <label for="zip">Zip</label>
       <input type="text" id="zip" [(ngModel)]="newCard.zip" name="zip" placeholder="10001" required="required">
@@ -50,13 +50,13 @@
     <br>
   </form>
 
-<!-- <div class="saved-cards">
+<div class="saved-cards">
     <h3>Saved Credit-cards</h3>
-    <h4>{{savedCard.name}}</h4> 
-    <div *ngFor="let oneCard of savedCard">
-      <h3>{{oneCard.name}}</h3>
+    <div *ngFor="let oneCard of cardsList">
+      <h3>Name: {{oneCard.name}}</h3>
       <h6>{{oneCard.cardnumber}}</h6>
       <h6>{{oneCard.cardexp}}</h6>
       <h6>{{oneCard.cvv}}</h6>
     </div>
-</div> -->
+  
+</div>

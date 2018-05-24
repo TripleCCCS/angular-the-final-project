@@ -19,7 +19,7 @@ currentUser: any;
   }
 
   signup(user) {
-    return this.http.post(`http://localhost:3000/signup`, user, { withCredentials: true })
+    return this.http.post(`http://localhost:3000/signup`, user)
       .map(res => res.json())
       .catch(this.handleError);
   }
@@ -49,6 +49,12 @@ currentUser: any;
       console.log('heyyyyy: ', res);
        res.json();
       })
+    .catch(this.handleError);
+  }
+
+  getTheCards() {
+    return this.http.get(`http://localhost:3000/creditcards`, { withCredentials: true })
+    .map(res => res.json())
     .catch(this.handleError);
   }
 
