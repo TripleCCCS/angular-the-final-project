@@ -12,8 +12,9 @@ import { Router } from '@angular/router';
 export class ProductListComponent implements OnInit {
 
   allTheProducts: Array<any> = [];
+
   searchTerm: String = "";
-  // resultsArray: Array<any> = [];
+
   
 
   constructor(
@@ -26,29 +27,17 @@ export class ProductListComponent implements OnInit {
     this.getAllTheProducts();
     // this.resultsArray = [];
   }
-  
-  
-  getTheProduct(id) {
-    this.myService.getOneProduct(id)
-    .subscribe((responseFromService) => {
-      this.allTheProducts = responseFromService;
-    });
-  }
-  
+
   getAllTheProducts() {
     console.log('getting the products');
+    console.log(this.allTheProducts);
     this.myService.getAllProducts()
     .subscribe((theList) => {
       this.allTheProducts = theList;
       console.log('products are: ', this.allTheProducts);
     });
   }
-  
-  // filterProducts(){
-  //   this.resultsArray = this.allTheProducts.filter((product=>{
-  //     return product.name.toLowerCase().includes(this.searchTerm.toLowerCase());
-  //   }))
-  // }
+
   // deleteProduct(idArgument) {
     //   this.myService.deleteProduct(idArgument)
     //   .subscribe(() => {

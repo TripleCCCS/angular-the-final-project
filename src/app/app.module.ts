@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FilterPipe } from './pipes/filter.pipe'
+import { HomePageComponent } from './home-page/home-page.component';
+
 
 
 const routes: Routes = [
@@ -34,6 +36,8 @@ const routes: Routes = [
     UserProfileComponent,
     ShoppingCartComponent,
     FilterPipe
+    HomePageComponent
+
 
   ],
   imports: [
