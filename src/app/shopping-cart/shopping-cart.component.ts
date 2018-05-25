@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor() { }
+  cartOrder: Array<any> = [];
 
-  ngOnInit() {
+  addToCart(theOrder) {
+   this.cartOrder.unshift(theOrder);
   }
 
+  constructor() { }
+
+  ngOnInit() { }
 }

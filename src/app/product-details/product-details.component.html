@@ -6,6 +6,7 @@
 <p>
   product-details works!
 </p>
+<p *ngIf="user"> {{ user.email }} </p>
 <div>
   <a [routerLink]="['/index']">Back To Home</a>
   <h1>Product Details</h1>
@@ -13,7 +14,7 @@
   <p>{{theProduct.description}}</p>
   <img src="{{theProduct.image1}}">
   <br>
-  <button type="button" (click)="addToCart(theProduct)">Add To Cart</button>
+
 </div>
 
 <div class="container">
@@ -32,4 +33,8 @@
               <li><a href="#">Separated link</a></li> -->
             </ul>
           </div>
+
+  <button type="button" (click)="addToCart(theProduct, user)">Add To Cart</button>
+  </div>
+
   

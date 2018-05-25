@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductlistService} from '../services/products.service';
+import { OuthService } from '../services/outh.service';
 import { Observable } from 'rxjs/Observable';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+  user: any;
 
   theProduct: any = {};
 
@@ -16,7 +18,9 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private myService: ProductlistService,
-    private route: ActivatedRoute
+    private myAuth: OuthService ,
+    private route: ActivatedRoute,
+    private myRouter: Router
    ) { }
 
    getTheProduct(id) {
@@ -36,11 +40,35 @@ updateTheProduct(idOfProduct) {
 }
 
   ngOnInit() {
+    this.myAuth.isLoggedIn()
+    .toPromise()
+    .then(() => {
+      this.user = this.myAuth.currentUser;
+      console.log('user in details page: ', this.user);
+    })
+    .catch( err => {
+      console.log('err in product details: ', err);
+    } );
+
     this.route.params
     .subscribe((theParams) => {
       const theID = theParams.id;
       this.getTheProduct(theID);
     });
+  }
+
+  addToCart(product, user){
+    var data = {prodId: product._id, userId: user._id}
+    console.log("product in component: ", data)
+    this.myAuth.sendToShoppingCart(data)
+    .toPromise()
+    .then(() => {
+      this.myRouter.navigate(['/index']);
+    })
+    .catch( err => {
+      console.log('err in addToCart: ', err);
+    } );
+    // console.log("product is: ", product)
   }
 
 }
