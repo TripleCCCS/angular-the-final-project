@@ -3,6 +3,11 @@ import {ProductlistService} from '../services/products.service';
 import * as $ from 'jquery';
 
 
+interface JQery<TElement> {
+  spectrum: any;
+}
+
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -14,7 +19,7 @@ export class HomePageComponent implements OnInit {
 
 
   constructor(
-    private myService: ProductlistService
+    private myService: ProductlistService,
   ) { }
 
 
@@ -22,8 +27,8 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.getAllTheProducts();
 
-    $('.carousel').carousel ({
-      interval: 2000
+    (<any>$('.carousel')).carousel ({
+      interval: 1000
     });
   }
 
@@ -37,7 +42,5 @@ export class HomePageComponent implements OnInit {
       console.log('products are: ', this.allTheProducts);
     });
   }
-
-
 
 }
