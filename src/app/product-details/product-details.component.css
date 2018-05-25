@@ -2,3 +2,11 @@
 img{
   width:400px;
 }
+
+/* body{
+  padding:10px;
+} */
+
+.show-on-hover:hover > ul.dropdown-menu {
+  display: block;    
+}
