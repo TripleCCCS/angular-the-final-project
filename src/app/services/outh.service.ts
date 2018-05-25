@@ -11,6 +11,7 @@ import { Observable } from 'rxjs/Observable';
 export class OuthService {
 
 currentUser: any;
+temporaryUser: any;
 
   constructor( private http: Http) { }
 
@@ -38,7 +39,12 @@ currentUser: any;
 
   isLoggedIn() {
     return this.http.get(`http://localhost:3000/loggedin`, { withCredentials: true })
-      .map(res => { this.currentUser = res, console.log('user in service: ', this.currentUser), res.json();
+      .map(res => { 
+        this.temporaryUser = res;
+        this.currentUser = JSON.parse(this.temporaryUser._body);
+        // this.currentUser = res, 
+        console.log('user in service: ', this.currentUser), 
+        res.json();
     })
       .catch(this.handleError);
   }
@@ -55,6 +61,16 @@ currentUser: any;
   getTheCards() {
     return this.http.get(`http://localhost:3000/creditcards`, { withCredentials: true })
     .map(res => res.json())
+    .catch(this.handleError);
+  }
+
+  sendToShoppingCart(dataToSend){
+    console.log("whattt: ", dataToSend);
+    return this.http.post(`http://localhost:3000/cart`, dataToSend, { withCredentials: true })
+    .map(res => {
+      console.log('carttttt: ', res);
+       res.json();
+      })
     .catch(this.handleError);
   }
 
