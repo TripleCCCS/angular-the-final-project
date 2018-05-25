@@ -1,7 +1,4 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+
 <div>
 <br>
 <br>
@@ -13,14 +10,30 @@
     
 
 
-<ul>
+<!-- <ul>
   <li *ngFor="let oneProduct of allTheProducts| filter:'name':pattern; let i = index">
-      <img routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}"> 
+      <img class="card-img-top" routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}"> 
       <a routerLink="/products/{{oneProduct._id}}"><h3>{{oneProduct.name}}</h3></a>
 <h5>{{oneProduct.color}}</h5>
 <h6>{{oneProduct.size}}</h6>
 <h4>{{oneProduct.price}}</h4>
   </li>
 
-</ul>
+</ul> -->
+
+
+
+
+<div class="row text-center" *ngFor="let oneProduct of allTheProducts">
+
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}">
+            <div class="card-body">
+              <h4 class="card-title">{{oneProduct.name}}</h4>
+              <p class="card-text"> {{oneProduct.price}} </p>
+            </div>
+          </div>
+        </div>
+
 
