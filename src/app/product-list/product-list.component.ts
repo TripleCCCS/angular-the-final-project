@@ -13,9 +13,11 @@ export class ProductListComponent implements OnInit {
 
   allTheProducts: Array<any> = [];
 
+
   searchTerm: String = "";
 
   
+
 
   constructor(
     private myService: ProductlistService,
