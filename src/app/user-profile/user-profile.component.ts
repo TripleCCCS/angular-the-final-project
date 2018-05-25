@@ -26,7 +26,9 @@ toggleForm() {
     this.myService.isLoggedIn()
     .toPromise()
     .then(() => {
-      this.user = JSON.parse(this.myService.currentUser._body);
+      // this.user = JSON.parse(this.myService.currentUser._body);
+      this.user = this.myService.currentUser;
+
       console.log('user in the component: ', this.user);
     })
     .catch();
