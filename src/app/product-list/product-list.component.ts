@@ -16,6 +16,8 @@ export class ProductListComponent implements OnInit {
   searchTerm: String = '';
 
 
+
+
   constructor(
     private myService: ProductlistService,
     private router: Router
