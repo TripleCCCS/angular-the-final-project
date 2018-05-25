@@ -1,3 +1,8 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <p>
   product-details works!
 </p>
@@ -9,7 +14,27 @@
   <p>{{theProduct.description}}</p>
   <img src="{{theProduct.image1}}">
   <br>
+
+</div>
+
+<div class="container">
+    <div class="row">
+      <!-- Our dropdown has class show-on-hover -->
+          <div class="btn-group show-on-hover">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Select Size <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">XS</a></li>
+              <li><a href="#">S</a></li>
+              <li><a href="#">M</a></li>
+              <li><a href="#">L</a></li>
+              <!-- <li class="divider"></li>
+              <li><a href="#">Separated link</a></li> -->
+            </ul>
+          </div>
+
   <button type="button" (click)="addToCart(theProduct, user)">Add To Cart</button>
   </div>
-  
+
   
