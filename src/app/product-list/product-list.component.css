@@ -3,17 +3,49 @@ img {
   height:450px;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 
   /* .theProducts{
-
+    overflow:scroll; */
+/* 
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-  }
+    justify-content: space-between; */
+  /* } */
 
 
-  .theProductImg {
+  /* .theProductImg {
     display: flex;
   align-items: center;
   flex-direction: column;
-  } */
+  }  */
+
+  .card-body {
+    display: inherit;
+    align-items: center;
+    align-content: center;
+    width: max-content;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 10%;
+    font-size: 2vh;
+  }
+
+  .card-title{
+    font-size: 2vh;
+  }
+
+  .card {
+    display: inherit;
+    align-items: center;
+    align-content: center;
+    width: max-content;
+    margin:0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 15%;
+    margin-top: 10%;
+  }
