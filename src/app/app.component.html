@@ -28,6 +28,9 @@
               <li class="nav-item">
                   <a class="nav-link" [routerLink]="['/login']">Login</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/index']">Products</a>
+                  </li>
           <li class="nav-item active">
             <a class="nav-link" [routerLink]="['/home']">Home
               <span class="sr-only">(current)</span>
@@ -39,12 +42,15 @@
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/cart']">Cart</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/logout']" (click)="logout()">Logout</a>
+            </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  
+  <!-- <button (click)="logout()"> logout </button> -->
 
 <script src="../assets/vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

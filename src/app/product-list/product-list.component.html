@@ -1,5 +1,6 @@
 
-<div>
+<div class="container-fluid">
+  <div>
 <br>
 <br>
 <br>
@@ -23,17 +24,17 @@
 
 
 
-
-<div class="row text-center" *ngFor="let oneProduct of allTheProducts">
-
-        <div class="col-lg-3 col-sm-6 mb-4">
+<div class="row">
+  <div class="theProducts row text-center" *ngFor="let oneProduct of allTheProducts">
+    <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}">
+            <img class="card-img-top theProductImg" routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}">
             <div class="card-body">
               <h4 class="card-title">{{oneProduct.name}}</h4>
               <p class="card-text"> {{oneProduct.price}} </p>
             </div>
           </div>
         </div>
-
+      </div>
+    </div>
 
