@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 body {
   font-family: 'Open Sans', 'sans-serif';
 }
@@ -25,4 +25,7 @@ body {
 
 /* } */
 
-/* body { padding-top: 80px; } */ 
+form, body { 
+  padding-top: 10%; 
+
+} 

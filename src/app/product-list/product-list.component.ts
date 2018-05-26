@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import {ProductlistService} from '../services/products.service';
+import { ProductlistService } from '../services/products.service';
 import { Router } from '@angular/router';
 
 
@@ -13,9 +13,7 @@ export class ProductListComponent implements OnInit {
 
   allTheProducts: Array<any> = [];
 
-
   searchTerm: String = "";
-
 
   constructor(
     private myService: ProductlistService,
