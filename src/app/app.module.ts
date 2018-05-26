@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProductlistService } from './services/products.service';
 import { OuthService } from './services/outh.service';
+import { CartService } from './services/cart.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SignupComponent } from './signup/signup.component';

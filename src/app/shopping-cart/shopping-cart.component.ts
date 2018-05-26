@@ -1,15 +1,22 @@
-
 import { Component, OnInit } from '@angular/core';
 import { OuthService } from '../services/outh.service';
 import { RouterModule, Routes } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })
+
+
 export class ShoppingCartComponent implements OnInit {
+user: any;
+newProduct: any = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
+productsList: Array <any> = [];
+
+
 
   user: any;
   newProduct: any = {name: '', description: '', id: '', category: '', price: '', material: '', color: '', quantity: ''};
