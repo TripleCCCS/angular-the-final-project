@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductlistService} from '../services/products.service';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 
 
 interface JQery<TElement> {
@@ -27,9 +27,9 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.getAllTheProducts();
 
-    (<any>$('.carousel')).carousel ({
-      interval: 1000
-    });
+    // (<any>$('.carousel')).carousel ({
+    //   interval: 1000
+    // });
   }
 
 
