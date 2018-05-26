@@ -2,3 +2,18 @@ img {
   width:300px;
   height:450px;
 }
+
+
+  /* .theProducts{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+
+  .theProductImg {
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+  } */

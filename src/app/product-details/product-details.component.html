@@ -20,7 +20,7 @@
           <h1 class="product__title">{{theProduct.name}}</h1>
           <div class="product__price">{{theProduct.price}}</div>
           <div class="product__subtitle">{{theProduct.description}}</div>
-          <a class="product__button" href="#" onClick="addToCart(theProduct, user)">
+          <a class="product__button" href="/user/${userId}/cart" (click)="addToCart(theProduct, user)">
             <span>Add to cart</span>
             <span></span>
           </a>

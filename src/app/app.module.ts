@@ -25,7 +25,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: UserProfileComponent },
-  { path: 'home', component: HomePageComponent }
+  { path: 'home', component: HomePageComponent },
+  { path: 'user/:id/cart', component: ShoppingCartComponent }
+
 ];
 
 @NgModule({
