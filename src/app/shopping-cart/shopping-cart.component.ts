@@ -12,11 +12,6 @@ import { ActivatedRoute } from '@angular/router';
 
 
 export class ShoppingCartComponent implements OnInit {
-user: any;
-newProduct: any = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
-productsList: Array <any> = [];
-
-
 
   user: any;
   newProduct: any = {name: '', description: '', id: '', category: '', price: '', material: '', color: '', quantity: ''};
