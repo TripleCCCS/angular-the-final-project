@@ -1,6 +1,3 @@
-
-<router-outlet></router-outlet>
-
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -28,9 +25,6 @@
               <li class="nav-item">
                   <a class="nav-link" [routerLink]="['/login']">Login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/index']">Products</a>
-                  </li>
           <li class="nav-item active">
             <a class="nav-link" [routerLink]="['/home']">Home
               <span class="sr-only">(current)</span>
@@ -40,17 +34,13 @@
             <a class="nav-link" [routerLink]="['/profile']">Account</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/cart']">Cart</a>
+            <a class="nav-link" [routerLink]="['/user/', user._id,'/cart']">Cart</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/logout']" (click)="logout()">Logout</a>
-            </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- <button (click)="logout()"> logout </button> -->
+  <router-outlet></router-outlet>
 
 <script src="../assets/vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
