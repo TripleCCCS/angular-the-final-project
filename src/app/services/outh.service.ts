@@ -39,10 +39,10 @@ temporaryUser: any;
 
   isLoggedIn() {
     return this.http.get(`http://localhost:3000/loggedin`, { withCredentials: true })
-      .map(res => { 
+      .map(res => {
         this.temporaryUser = res;
         this.currentUser = JSON.parse(this.temporaryUser._body);
-        console.log('user in service: ', this.currentUser), 
+        console.log('user in service: ', this.currentUser),
         res.json();
     })
       .catch(this.handleError);
@@ -63,8 +63,8 @@ temporaryUser: any;
     .catch(this.handleError);
   }
 
-  sendToShoppingCart(dataToSend){
-    console.log("whattt: ", dataToSend);
+  sendToShoppingCart(dataToSend) {
+    console.log('whattt: ', dataToSend);
     return this.http.post(`http://localhost:3000/cart`, dataToSend, { withCredentials: true })
     .map(res => {
       console.log('carttttt: ', res);
