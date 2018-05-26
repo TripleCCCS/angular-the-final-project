@@ -1,7 +1,4 @@
 
-body {
-  font-family: 'Open Sans', 'sans-serif';
-}
 
 /* nav{
   background-color:  #ffb3b3;
@@ -29,3 +26,6 @@ form, body {
   padding-top: 10%; 
 
 } 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
