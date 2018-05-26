@@ -1,3 +1,7 @@
-<p>
-  shopping-cart works!
-</p>
+<br><br><br><br><br><br><br><br><br>
+<ul>
+  <li *ngFor="let one of cartList">
+    {{ one.name }}
+    <img src="{{ one.image1 }}">    
+  </li>
+</ul>

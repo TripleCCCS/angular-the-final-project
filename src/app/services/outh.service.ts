@@ -42,7 +42,6 @@ temporaryUser: any;
       .map(res => { 
         this.temporaryUser = res;
         this.currentUser = JSON.parse(this.temporaryUser._body);
-        // this.currentUser = res, 
         console.log('user in service: ', this.currentUser), 
         res.json();
     })
@@ -71,6 +70,12 @@ temporaryUser: any;
       console.log('carttttt: ', res);
        res.json();
       })
+    .catch(this.handleError);
+  }
+
+  getTheCartContent(userId) {
+    return this.http.get(`http://localhost:3000/user/${userId}/cart`, { withCredentials: true })
+    .map(res => res.json())
     .catch(this.handleError);
   }
 
