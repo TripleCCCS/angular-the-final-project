@@ -42,19 +42,6 @@ export class ShoppingCartComponent implements OnInit {
     // this.showTheCart(userId);
   }
 
-  // addNewCard(newCard) {
-  //   console.log('am i here? =======', this.newCard);
-  //   this.myService.cardInfo(this.newCard)
-  //   .toPromise()
-  //   .then( () => {
-  //     // console.log('card in the TS file: ', newCard);
-  //     this.newCard = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
-  //     this.myRouter.navigate(['/profile']);
-  //   } )
-  //   .catch( err => {
-  //     console.log('err in component when saving card ', err);
-  //   });
-  // }
 
   showTheCart(userId) {
     this.myService.getTheCartContent(userId)
@@ -63,6 +50,8 @@ export class ShoppingCartComponent implements OnInit {
       console.log('array in the component: ', arrayOfProducts );
     });
   }
+
+
 
 }
 
