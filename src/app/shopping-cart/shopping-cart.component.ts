@@ -12,9 +12,6 @@ import { ActivatedRoute } from '@angular/router';
 
 
 export class ShoppingCartComponent implements OnInit {
-user: any;
-newProduct: any = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
-productsList: Array <any> = [];
 
 
 
@@ -47,19 +44,6 @@ productsList: Array <any> = [];
     // this.showTheCart(userId);
   }
 
-  // addNewCard(newCard) {
-  //   console.log('am i here? =======', this.newCard);
-  //   this.myService.cardInfo(this.newCard)
-  //   .toPromise()
-  //   .then( () => {
-  //     // console.log('card in the TS file: ', newCard);
-  //     this.newCard = {cardname: '', cardnumber: '', mailing_address: '', cardexp: '', cvv: '', city: '', state: '', zip: ''};
-  //     this.myRouter.navigate(['/profile']);
-  //   } )
-  //   .catch( err => {
-  //     console.log('err in component when saving card ', err);
-  //   });
-  // }
 
   showTheCart(userId) {
     this.myService.getTheCartContent(userId)
@@ -68,6 +52,8 @@ productsList: Array <any> = [];
       console.log('array in the component: ', arrayOfProducts );
     });
   }
+
+
 
 }
 
