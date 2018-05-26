@@ -1,4 +1,4 @@
-.carousel-inner img {
+.carousel-inner .carouselImg {
   width: 100%;
   height: 100%;
 }
@@ -7,4 +7,42 @@
 img {
   width:300px;
   height:450px;
+}
+
+.card {
+  display: inherit;
+  align-items: center;
+  align-content: center;
+  /* width: max-content; */
+  margin:0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-left: 15%;
+  margin-top: 10%;
+  width: initial;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-body {
+  display: inherit;
+  align-items: center;
+  align-content: center;
+  /* width: max-content; */
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-left: 10%;
+  font-size: 2vh;
+  /* width: initial; */
+}
+
+.card-title{
+  font-size: 2vh;
+  width: initial;
+}
+
+.theProductImg {
+  /* width: initial; */
 }
