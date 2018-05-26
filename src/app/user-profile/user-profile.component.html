@@ -6,7 +6,7 @@
 <meta name="author" content="">
 
 
-<div *ngIf="user">
+<div class="signupStuff" *ngIf="user">
   <h2>Hello {{ user.name }}</h2>
 </div>
 
@@ -15,7 +15,7 @@
 <h3>Prefer easy check-out? keep a card on file :</h3>
 <button (click)="toggleForm()" type="button">Click to add a card </button>
 
-<form  *ngIf = "isFormShowing">
+<form class="cardsForm"  *ngIf = "isFormShowing">
     <label for="fname">Accepted Cards</label>
     <div class="icon-container">
       <i class="fa fa-cc-visa" style="color:navy;"></i>
@@ -60,8 +60,8 @@
     <h3>Saved Credit-cards</h3>
     <div *ngFor="let oneCard of cardsList">
       <h3>Name: {{oneCard.name}}</h3>
-      <h6>{{oneCard.cardnumber}}</h6>
-      <h6>{{oneCard.cardexp}}</h6>
-      <h6>{{oneCard.cvv}}</h6>
+      <h6>Credit Card Number: {{oneCard.cardnumber}}</h6>
+      <h6>Exp: {{oneCard.cardexp}}</h6>
+      <h6>CVV: {{oneCard.cvv}}</h6>
     </div>
 </div>
