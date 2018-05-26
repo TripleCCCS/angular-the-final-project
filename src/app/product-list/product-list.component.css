@@ -1,3 +1,7 @@
+.theColumn{
+  padding-left: 20%;
+}
+
 .card {
   display: inherit;
   align-items: center;
@@ -12,9 +16,6 @@
 
 /* .theContainer {} */
 
-.theColumn{
-  padding-left: 20%;
-}
 
 .card-body {
   display: inherit;
