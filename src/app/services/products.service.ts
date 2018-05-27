@@ -25,17 +25,17 @@ export class ProductlistService {
   }
 
 
-  deleteProduct(id) {
-    const body = {};
-    return this.myHttp.post(`http://localhost:3000/task/delete/${id}`, body)
-    .map((responseFromApi) => responseFromApi.json());
-  }
+  // deleteProduct(id) {
+  //   const body = {};
+  //   return this.myHttp.post(`http://localhost:3000/task/delete/${id}`, body)
+  //   .map((responseFromApi) => responseFromApi.json());
+  // }
 
 
-  createNewProduct(theWholeProductObject) {
-    return this.myHttp.post(`http://localhost:3000/product/products`, theWholeProductObject)
-    .map((responseFromApi) => responseFromApi.json());
-  }
+  // createNewProduct(theWholeProductObject) {
+  //   return this.myHttp.post(`http://localhost:3000/product/products`, theWholeProductObject)
+  //   .map((responseFromApi) => responseFromApi.json());
+  // }
 
 
   updateProduct(theID, theUpdates) {

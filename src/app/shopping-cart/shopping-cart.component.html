@@ -1,7 +1,12 @@
 <br><br><br><br><br><br><br><br><br>
-<ul>
+<ul *ngIf="cartList.length > 0">
   <li *ngFor="let one of cartList">
-    {{ one.name }}
-    <img src="{{ one.image1 }}">    
-  </li>
+    <h1>{{ one.name }}</h1>
+    <img src="{{ one.image1 }}"> 
+   <button (click)="deleteFromCart(one)" type="button"> Delete </button>
+    </li>
 </ul>
+
+<div *ngIf="cartList.length === 0">
+<p>No products in your shopping cart.</p>
+</div>
