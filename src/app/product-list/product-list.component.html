@@ -1,32 +1,32 @@
 
-<div class="container-fluid">
   <div>
-<br>
-<br>
-<br>
-
-<h3>Search For a Product</h3>
-  <input type="text"[(ngModel)]="pattern">
-</div>
+    <br>
+    <br>
+    <br>
     
-
-
-<!-- <ul>
-  <li *ngFor="let oneProduct of allTheProducts| filter:'name':pattern; let i = index">
+    <h3>Search For a Product</h3>
+    <input type="text"[(ngModel)]="pattern">
+  </div>
+  
+  
+  
+  <!-- <ul>
+    <li *ngFor="let oneProduct of allTheProducts| filter:'name':pattern; let i = index">
       <img class="card-img-top" routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}"> 
       <a routerLink="/products/{{oneProduct._id}}"><h3>{{oneProduct.name}}</h3></a>
-<h5>{{oneProduct.color}}</h5>
-<h6>{{oneProduct.size}}</h6>
-<h4>{{oneProduct.price}}</h4>
-  </li>
-
-</ul> -->
-
-
-
+      <h5>{{oneProduct.color}}</h5>
+      <h6>{{oneProduct.size}}</h6>
+      <h4>{{oneProduct.price}}</h4>
+    </li>
+    
+  </ul> -->
+  
+  
+  
+<div class="container-fluid theProducts">
 <div class="row">
-  <div class="theProducts row text-center" *ngFor="let oneProduct of allTheProducts">
-    <div class="col-md-4">
+  <div class="row text-center" *ngFor="let oneProduct of allTheProducts">
+    <div class="col-md theColumn">
           <div class="card">
             <img class="card-img-top theProductImg" routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}">
             <div class="card-body">
@@ -37,4 +37,24 @@
         </div>
       </div>
     </div>
+
+
+
+    
+    
+    
+    <br>
+<br>
+<br>
+
+
+
+
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Tripple C'z 2018</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 

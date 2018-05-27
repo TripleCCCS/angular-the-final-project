@@ -5,28 +5,26 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="signupStuff" *ngIf="user">
   <h2>Hello {{ user.name }}</h2>
 </div>
-
-
-
 <h3>Prefer easy check-out? keep a card on file :</h3>
 <button (click)="toggleForm()" type="button">Click to add a card </button>
-
 <form class="cardsForm"  *ngIf = "isFormShowing">
     <label for="fname">Accepted Cards</label>
     <div class="icon-container">
       <i class="fa fa-cc-visa" style="color:navy;"></i>
       
       <i class="fa fa-cc-amex" style="color:blue;"></i>
-
       <i class="fa fa-cc-mastercard" style="color:red;"></i>
-
       <i class="fa fa-cc-discover" style="color:orange;"></i>
     </div>
-
     <label for="cname">Name on Card</label>
     <input type="text" id="cname" [(ngModel)]="newCard.cardname" name="cardname" placeholder="John More Doe">
     <br>
@@ -55,7 +53,6 @@
     <button type="button" (click)="addNewCard(newCard)" >Submit</button>
     <br>
   </form>
-
 <div class="saved-cards">
     <h3>Saved Credit-cards</h3>
     <div *ngFor="let oneCard of cardsList">
