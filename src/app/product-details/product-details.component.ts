@@ -58,7 +58,7 @@ updateTheProduct(idOfProduct) {
   }
 
   addToCart(product, user) {
-    var data = {prodId: product._id, userId: user._id};
+    const data = {prodId: product._id, userId: user._id};
     console.log('what is data in component: ', data);
     this.myAuth.sendToShoppingCart(data)
     .toPromise()
