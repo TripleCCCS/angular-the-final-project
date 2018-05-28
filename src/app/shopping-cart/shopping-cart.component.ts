@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OuthService } from '../services/outh.service';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -19,7 +19,7 @@ export class ShoppingCartComponent implements OnInit {
   cartList: any = [];
 
   constructor( private myService: OuthService,
-    private myRouter: RouterModule,
+    private myRouter: Router,
     private myActivated: ActivatedRoute ) { }
 
   ngOnInit() {
@@ -51,8 +51,20 @@ export class ShoppingCartComponent implements OnInit {
     });
   }
 
+  deleteFromCart(product) {
+    var data = {prodId: product._id}
+    // console.log("product to be deleted: ", data)
+    this.myService.removeFromShoppingCart(data)
+    .toPromise()
+    .then(() => {
+      this.myRouter.navigate(['/user',product._id,'cart']);
+    })
+    .catch( err => {
+      console.log('err in deleteFromCart: ', err)
+    } );
+    console.log("product is: ", product)
+  }
+  }
 
-
-}
 
 

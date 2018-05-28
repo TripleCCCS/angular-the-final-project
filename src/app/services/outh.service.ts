@@ -78,6 +78,14 @@ temporaryUser: any;
     .map(res => res.json())
     .catch(this.handleError);
   }
-
+  removeFromShoppingCart(prodId) {
+    console.log('data to send: ', prodId.prodId);
+    return this.http.post(`http://localhost:3000/cart/${prodId.prodId}/delete`, prodId, { withCredentials: true })
+    .map(res => {
+      console.log('carttttt: ', res);
+       res.json();
+      })
+    .catch(this.handleError);
+  }
 
 }

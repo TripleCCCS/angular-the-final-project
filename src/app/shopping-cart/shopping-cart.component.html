@@ -1,4 +1,20 @@
 <br><br><br><br><br><br><br><br><br>
+<ul *ngIf="cartList.length > 0">
+  <li *ngFor="let one of cartList">
+    <h1>{{ one.name }}</h1>
+    <img src="{{ one.image1 }}"> 
+   <button (click)="deleteFromCart(one)" type="button"> Delete </button>
+    </li>
+</ul>
+
+<!-- delete for clauds -->
+
+
+<div *ngIf="cartList.length === 0">
+<p>No products in your shopping cart.</p>
+</div>
+
+
 <div>
 
   <ul>
@@ -20,6 +36,7 @@
   <p><b>Total in dollar:</b> {{quantity * price}}</p>
   
   </div>
+
 
 <br>
 <br>
