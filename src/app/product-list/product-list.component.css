@@ -1,5 +1,6 @@
 .theColumn{
   padding-left: 20%;
+  
 }
 
 .card {
@@ -25,6 +26,11 @@
   margin-left: 10px;
   font-size: 2vh;
   text-align: center;
+  background-color: transparent;
+}
+
+.prodCard{
+  border: 0;
 }
 
 .card-title{
@@ -39,9 +45,31 @@ img {
   height:450px;
 }
 
-body {
+body, html {
   font-family: 'Bitter', serif;
+  background-color: #FAF7F4;
+  background-repeat: cover;
 }
+
+
+.card{
+background-color: #FAF7F4; 
+}
+
+.theProds{
+  background-color: #FAF7F4;
+  padding: 4%;
+  align-content: center;
+}
+
+.theSearchBar{
+  align-content: center;
+}
+
+.row{
+  background-color: #FAF7F4;
+}
+
 
 
   /* .theProducts{
