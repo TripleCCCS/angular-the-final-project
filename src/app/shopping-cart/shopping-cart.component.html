@@ -3,6 +3,7 @@
   <li *ngFor="let one of cartList">
     <h1>{{ one.name }}</h1>
     <img src="{{ one.image1 }}"> 
+    <h6>{{ one.price }}</h6>
    <button (click)="deleteFromCart(one)" type="button"> Delete </button>
     </li>
 </ul>
@@ -15,7 +16,7 @@
 </div>
 
 
-<div>
+<!-- <div>
 
   <ul>
     <li *ngFor="let one of cartList">
@@ -24,7 +25,7 @@
       <h6>{{ one.price}}</h6>  
     </li>
   </ul>
-</div>
+</div> -->
 
 <div data-ng-app="" data-ng-init="quantity=1;price=5">
 
