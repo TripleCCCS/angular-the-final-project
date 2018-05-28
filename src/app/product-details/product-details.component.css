@@ -52,7 +52,7 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
-  background: #f9f9f9;
+  background-color: #FAF7F4;
 }
 .header {
   position: relative;
@@ -224,3 +224,8 @@ body {
 .product__title{
   color: #f66049;
 }
+
+body, html {
+background-color: #FAF7F4; 
+}
+
