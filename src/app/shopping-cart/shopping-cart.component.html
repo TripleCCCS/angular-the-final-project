@@ -1,12 +1,25 @@
 <br><br><br><br><br><br><br><br><br>
-<ul>
-  <li *ngFor="let one of cartList">
-    {{ one.name }}
-    <img src="{{ one.image1 }}">    
-  </li>
-</ul>
+<div>
 
+  <ul>
+    <li *ngFor="let one of cartList">
+      {{ one.name }}
+      <img src="{{ one.image1 }}">  
+      <h6>{{ one.price}}</h6>  
+    </li>
+  </ul>
+</div>
 
+<div data-ng-app="" data-ng-init="quantity=1;price=5">
+
+  <h2>Cost Calculator</h2>
+  
+  Quantity: <input type="number" ng-model="quantity">
+  Price: <input type="number" ng-model="price">
+  
+  <p><b>Total in dollar:</b> {{quantity * price}}</p>
+  
+  </div>
 
 <br>
 <br>
