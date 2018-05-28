@@ -25,7 +25,7 @@
   
 <div class="container-fluid theProducts">
 <div class="row">
-  <div class="row text-center" *ngFor="let oneProduct of allTheProducts">
+  <div class="row text-center" *ngFor="let oneProduct of allTheProducts | filter:'name':pattern; let i = index">
     <div class="col-md theColumn">
           <div class="card">
             <img class="card-img-top theProductImg" routerLink="/products/{{oneProduct._id}}" src="{{oneProduct.image1}}">
