@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProductlistService } from './services/products.service';
 import { OuthService } from './services/outh.service';
-import { CartService } from './services/cart.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SignupComponent } from './signup/signup.component';
@@ -26,7 +25,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: UserProfileComponent },
   { path: 'home', component: HomePageComponent },
-  { path: 'user/:id/cart', component: ShoppingCartComponent }
+  { path: 'user/:id/cart', component: ShoppingCartComponent },
+
 
 ];
 

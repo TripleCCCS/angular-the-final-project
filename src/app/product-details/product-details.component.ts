@@ -63,7 +63,9 @@ updateTheProduct(idOfProduct) {
     this.myAuth.sendToShoppingCart(data)
     .toPromise()
     .then(() => {
-      this.myRouter.navigate(['/user', user._id, 'cart']);
+
+      this.myRouter.navigate(['/user',user._id,'cart' ]);
+
     })
     .catch( err => {
       console.log('err in addToCart: ', err);
