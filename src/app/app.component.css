@@ -1,12 +1,13 @@
 
 
-/* nav{
+ nav{
   background-color:  #ffb3b3;
   border: #ff9999;
   width: 100%;
 
 }
 
+/*
 .theNav{
   display: flex;
   align-content: space-between;
@@ -27,5 +28,5 @@ form, body {
 
 } 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Bitter', serif;
 }
