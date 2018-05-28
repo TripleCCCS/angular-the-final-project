@@ -11,6 +11,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
+    font-family: 'Bitter', serif;
   }
 }
 

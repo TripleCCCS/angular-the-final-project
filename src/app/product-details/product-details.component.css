@@ -220,3 +220,7 @@ body {
 .product__button--success span:first-child {
   top: -4rem;
 }
+
+.product__title{
+  color: #f66049;
+}

@@ -18,7 +18,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'index',  component: ProductListComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'login', component: LoginComponent },

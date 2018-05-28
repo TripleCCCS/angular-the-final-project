@@ -30,6 +30,8 @@
 .card-title{
   font-size: 2vh;
   text-align: center;
+  color: #f66049;
+  font-family: 'Bitter', serif;
 }
 
 img {
@@ -38,7 +40,7 @@ img {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Bitter', serif;
 }
 
 
