@@ -4,6 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { FilterPipe } from '../app/pipes/filter.pipe';
 import { OuthService } from '../app/services/outh.service';
 import * as $ from 'jquery';
+import { Observable } from 'rxjs/Observable';
+
 
 
 @Component({

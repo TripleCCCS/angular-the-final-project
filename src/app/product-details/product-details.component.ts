@@ -57,13 +57,15 @@ updateTheProduct(idOfProduct) {
     });
   }
 
-  addToCart(product, user){
-    var data = {prodId: product._id, userId: user._id}
-    console.log("product in component: ", data)
+  addToCart(product, user) {
+    var data = {prodId: product._id, userId: user._id};
+    console.log('what is data in component: ', data);
     this.myAuth.sendToShoppingCart(data)
     .toPromise()
     .then(() => {
+
       this.myRouter.navigate(['/user',user._id,'cart' ]);
+
     })
     .catch( err => {
       console.log('err in addToCart: ', err);
