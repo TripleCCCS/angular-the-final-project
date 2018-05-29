@@ -2,20 +2,22 @@
   padding-top: 10%;
 } */
 
-/*=== 1. General Structure ===*/
-html,
-body {
-  background: #efefef;
-  padding: 10px;
-  font-family: 'Varela Round';
+.signUpBody {
+  background-image: url('http://livefastmag.com/wp-content/uploads/2015/08/FOR-LOVE-AND-LEMONS-SKIVVIES-FALL-2015-6-1200x800.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
 }
+
+
 /*=== 2. Anchor Link ===*/
 a {
-  color: #aaaaaa;
+  color: black;
   transition: all ease-in-out 200ms;
 }
 a:hover {
-  color: #333333;
+  color: #f66049;
   text-decoration: none;
 }
 /*=== 3. Text Outside the Box ===*/
@@ -31,6 +33,7 @@ a:hover {
   max-width: 300px;
   border-radius: 5px;
   display: inline-block;
+  padding-top: -2vh;
 }
 .main-login-form {
   position: relative;
@@ -41,9 +44,10 @@ a:hover {
   border-radius: 0;
   background: transparent;
   color: #555555;
-  padding: 7px 0;
+  /* padding: 7px 0; */
   font-weight: bold;
   height:auto;
+  /* padding-top: 10%; */
 }
 .login-form-1 .form-control::-webkit-input-placeholder {
   color: #999999;
@@ -66,7 +70,7 @@ a:hover {
   background: #ffffff;
   color: #999999;
   border-radius: 8px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 .login-group-checkbox {
   padding: 5px 0;
@@ -133,7 +137,7 @@ label.form-invalid:after {
 /*=== 7. Form - Main Message ===*/
 .login-form-main-message {
   background: #ffffff;
-  color: #999999;
+  color: white;
   border-left: 3px solid transparent;
   border-radius: 3px;
   margin-bottom: 8px;
@@ -264,8 +268,16 @@ label:hover:before {
 }
 /*=== 9. Misc ===*/
 .logo {
-  padding: 15px 0;
+  padding: 5% 0;
   font-size: 25px;
-  color: #aaaaaa;
+  color:white;
   font-weight: bold;
+  font-family: 'Mr Dafoe', cursive;
+    font-size: 36px;
+}
+
+.etc-login-form{
+  color:black;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
 }

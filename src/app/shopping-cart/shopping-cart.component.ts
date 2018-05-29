@@ -23,6 +23,7 @@ export class ShoppingCartComponent implements OnInit {
     private myActivated: ActivatedRoute ) { }
 
   ngOnInit() {
+    // this.myService.getTheCartContent(this.user);
     this.myService.isLoggedIn()
     .toPromise()
     .then(() => {
