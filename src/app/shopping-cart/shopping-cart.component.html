@@ -17,7 +17,7 @@
                     <!-- PRODUCT -->
                     <div class="row" *ngFor="let one of cartList">
                         <div class="col-12 col-sm-12 col-md-2 text-center">
-                                <img class="img-responsive" src="{{ one.image1 }}" alt="preview" width="120" height="80" style="padding-top: 7px">
+                                <img class="img-responsive" routerLink="/products/{{one._id}}"src="{{ one.image1 }}"alt="preview" width="120" height="80" style="padding-top: 7px">
                         </div>
                         <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
                             <h4 class="product-name"><strong>{{ one.name }}</strong></h4>
