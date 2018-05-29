@@ -16,7 +16,6 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { HomePageComponent } from './home-page/home-page.component';
 
 
-
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'index',  component: ProductListComponent },

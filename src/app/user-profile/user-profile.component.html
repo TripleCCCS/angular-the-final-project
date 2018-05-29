@@ -1,5 +1,5 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
@@ -29,6 +29,7 @@
   <source src="https://r1---sn-q4flrnes.googlevideo.com/videoplayback?clen=1552596&requiressl=yes&lmt=1461291526175918&expire=1527633695&c=WEB&key=cms1&signature=76C47E915DB7445D2D9853D3EE07ED2CA3DC31A0.709FD572A4B77E575F6E044F530C978A17785010&ipbits=0&itag=18&sparams=clen,dur,ei,expire,gir,id,initcwndbps,ip,ipbits,itag,lmt,mime,mip,mm,mn,ms,mv,pl,ratebypass,requiressl,source,usequic&dur=16.950&mime=video%2Fmp4&fvip=1&id=o-AI-LbH-RLoZPIXQ_hN8ytirSqeHkaewGgXX2jwH3Khdw&ei=v4INW_OcLNr9WpmFobAJ&pl=21&source=youtube&ratebypass=yes&ip=212.47.239.90&gir=yes&redirect_counter=1&cm2rm=sn-25gdz7e&req_id=745cd62beed4a3ee&cms_redirect=yes&mip=104.219.179.22&mm=34&mn=sn-q4flrnes&ms=ltu&mt=1527613291&mv=m" type="video/mp4">
   
   </video>
+  
   <div id="polina" *ngIf="user">
   <h1>Welcome {{ user.name }}</h1>
   <p>Prefer easy check-out? 
@@ -72,7 +73,7 @@
         <label for="adr">Address</label>
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fa fa-address-card-o"></i></span>
+            <span class="input-group-text"><i class="fas fa-address-card"></i></span>
           </div>
           <input type="text" [(ngModel)]="newCard.mailing_address" class="form-control" name="address" placeholder="Address" required="true">
         </div> <!-- input-group.// -->
@@ -81,7 +82,7 @@
         <label for="city">City</label>
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fa fa-address-card-o"></i></span>
+            <span class="input-group-text"><i class="fas fa-location-arrow"></i></span>
           </div>
           <input type="text" [(ngModel)]="newCard.city" class="form-control" name="city" placeholder="City" required="true">
         </div> <!-- input-group.// -->
@@ -90,7 +91,7 @@
         <label for="state">State</label>
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fa fa-address-card-o"></i></span>
+            <span class="input-group-text"><i class="fas fa-map-marker"></i></span>
           </div>
           <input type="text" [(ngModel)]="newCard.state" class="form-control" name="state" placeholder="State" required="true">
         </div> <!-- input-group.// -->
@@ -99,7 +100,7 @@
         <label for="zip">Zip</label>
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fa fa-address-card-o"></i></span>
+            <span class="input-group-text"><i class="fas fa-map-marker"></i></span>
           </div>
           <input type="text" [(ngModel)]="newCard.zip" class="form-control" name="zip" placeholder="Zip Code" required="true">
         </div> <!-- input-group.// -->
