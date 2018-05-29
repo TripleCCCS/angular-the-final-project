@@ -1,5 +1,5 @@
 .theColumn{
-  padding-left: 20%;
+  /* padding-left: 15%; */
   
 }
 
@@ -68,17 +68,22 @@ background-color: #FAF7F4;
 
 .row{
   background-color: #FAF7F4;
+  padding: 0 15px 0 15px;
+  margin: 0 auto;
 }
 
 
 
-  /* .theProducts{
-    overflow:scroll; */
+
+
+  .theProducts{
+    /* overflow:scroll; */
 /* 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; */
-  /* } */
+    padding: 0;
+  }
 
 
   /* .theProductImg {

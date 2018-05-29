@@ -1,6 +1,7 @@
  .btn {
   display: flex;
   width:70%;
+  padding-left: 8%;
 }
 
 /*
@@ -11,9 +12,19 @@
 html,
 body {
   background: #efefef;
-  padding: 10px;
+  padding-top: 20px;
   font-family:'Montserrat', sans-serif;;
 }
+
+.loginBody {
+  /* background-image: url('../../assets/Images/login.jpg') no-repeat center fixed; */
+  background-image: url('https://cdn.shopify.com/s/files/1/0216/3104/files/Desktop_V2_20.jpg?1928105960207227313');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
+
 /*=== 2. Anchor Link ===*/
 a {
   color: #aaaaaa;
@@ -36,6 +47,7 @@ a:hover {
   max-width: 300px;
   border-radius: 5px;
   display: inline-block;
+  padding-top: -2vh;
 }
 .main-login-form {
   position: relative;
@@ -46,9 +58,10 @@ a:hover {
   border-radius: 0;
   background: transparent;
   color: #555555;
-  padding: 7px 0;
+  /* padding: 7px 0; */
   font-weight: bold;
   height:auto;
+  /* padding-top: 10%; */
 }
 .login-form-1 .form-control::-webkit-input-placeholder {
   color: #999999;
@@ -71,7 +84,7 @@ a:hover {
   background: #ffffff;
   color: #999999;
   border-radius: 8px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 .login-group-checkbox {
   padding: 5px 0;
@@ -269,8 +282,16 @@ label:hover:before {
 }
 /*=== 9. Misc ===*/
 .logo {
-  padding: 15px 0;
+  padding: 5% 0;
   font-size: 25px;
-  color: #aaaaaa;
+  color:white;
   font-weight: bold;
+  font-family: 'Mr Dafoe', cursive;
+    font-size: 36px;
+}
+
+.etc-login-form{
+  color:white;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
 }

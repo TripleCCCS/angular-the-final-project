@@ -52,17 +52,17 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   deleteFromCart(product) {
-    var data = {prodId: product._id}
+    const data = {prodId: product._id};
     // console.log("product to be deleted: ", data)
     this.myService.removeFromShoppingCart(data)
     .toPromise()
     .then(() => {
-      this.myRouter.navigate(['/user',product._id,'cart']);
+      this.myRouter.navigate(['/user', product._id, 'cart']);
     })
     .catch( err => {
-      console.log('err in deleteFromCart: ', err)
+      console.log('err in deleteFromCart: ', err);
     } );
-    console.log("product is: ", product)
+    console.log('product is: ', product);
   }
   }
 
