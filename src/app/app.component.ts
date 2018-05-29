@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     .toPromise()
     .then( () => {
       this.user = this.myAuth.currentUser;
-      console.log('helloooooooo: ', this.user);
+      console.log('helloooooooo: ', this.user.name);
     } )
     .catch( err => {
       console.log('error in app comp: ', err);

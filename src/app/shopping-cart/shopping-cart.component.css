@@ -2,3 +2,15 @@ img{
   width: 400px;
 }
 
+body, html {
+  font-family: 'Bitter', serif;
+}
+
+.product-name {
+  color: #f66049;
+  font-family: 'Bitter', serif;
+}
+/* 
+.cartRow{
+padding: 2%;
+} */
