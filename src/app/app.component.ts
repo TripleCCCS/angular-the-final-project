@@ -14,7 +14,13 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  formInfo: any = {name: '', password: '', email: '', address: '', city: '',  state: '', zip: ''};
+
   user: any;
+
+  error: any;
+
   title = 'app';
 
   constructor( private myAuth: OuthService ) {
@@ -32,6 +38,19 @@ export class AppComponent implements OnInit {
       console.log('error in app comp: ', err);
     });
   }
+
+
+  logout() {
+    this.myAuth.logout()
+    .subscribe(
+    () => {this.user = null;
+      this.formInfo = {};
+    },
+    (err) => this.error = err
+  );
+  }
+
+
 }
 
 

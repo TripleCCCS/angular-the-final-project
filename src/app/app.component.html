@@ -14,12 +14,16 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f2c4b9;">
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/profile']"><i class="fas fa-user-circle fa-2x"></i> <a *ngIf="user" class="username"> {{ user.name }} </a> </a>
+      <a class="navbar-brand" [routerLink]="['/profile']"><i class="fas fa-user-circle fa-2x"></i><a *ngIf="user" class="username">{{ user.name }}</a></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i>
+                </a>
+              </li>
             <li class="nav-item active">
                 <a class="nav-link" [routerLink]="['/home']"><i class="fas fa-home"></i>
                   <span class="sr-only">(current)</span>
@@ -29,15 +33,15 @@
                 <a class="nav-link" [routerLink]="['/index']"><i class="fas fa-tag"></i>
                 </a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i>
-                  </a>
-                </li>
 
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/user',myAuth._id, 'cart']"><i class="fas fa-shopping-bag"></i></a>
 <!--             <a class="nav-link" [routerLink]="['/user',user._id,'cart']">Cart</a> -->
           </li>
+          <li class="nav-item">
+              <a class="nav-link" (click)="logout()" [routerLink]="['/index']"><i class="fas fa-sign-out-alt"></i>
+              </a>
+            </li>
         </ul>
       </div>
     </div>
