@@ -28,7 +28,7 @@ body {
 
 /*=== 2. Anchor Link ===*/
 a {
-  color: black;
+  color: white;
   transition: all ease-in-out 200ms;
 }
 a:hover {
@@ -292,7 +292,7 @@ label:hover:before {
 }
 
 .etc-login-form{
-  color:black;
+  color:white;
   font-weight: bold;
   font-family: 'Bitter', serif;
 }
