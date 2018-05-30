@@ -7,7 +7,7 @@ video {
     top: 50%;
     left: 50%;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     width: auto;
     height: auto;
     z-index: -100;
@@ -39,20 +39,22 @@ video {
 
 #polina button { 
   display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none; 
-  margin: 1rem auto; 
-  font-size: 1.3rem;
+  width: 100%;
+  /* padding: .4rem; */
+  /* border: none;  */
+  /* margin: 1rem auto;  */
+  font-size: 3.5rem;
   background: rgba(0,0,0,0.3);
   /* background: rgba(255,255,255,0.23); */
   color: #fff;
-  border-radius: 3px; 
+  border-radius: 2px; 
   cursor: pointer;
   transition: .3s background;
+  font-family: 'Marck Script', cursive;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
 #polina button:hover { 
-   background: rgba(0,0,0,0.5);
+   background: #F4C4BB;
 }
 
 a {
@@ -79,7 +81,8 @@ a:hover{
 footer {
   font-family: 'Bitter', serif;
   font-size: 10px;
-    left: 0;
+  position: absolute;
+    /* left: 0; */
     bottom: 0;
     height: 70px;
     width: 100%;
