@@ -21,7 +21,7 @@
   align-items: center;
   align-content: inherit;
   width: max-content;
-  padding-left: 10px;
+  padding-left: 5vh;
   padding-right: 10px;
   margin-left: 10px;
   font-size: 2vh;
@@ -93,3 +93,12 @@ background-color: #FAF7F4;
   }  */
 
 
+  footer {
+    font-family: 'Bitter', serif;
+    font-size: 10px;
+    /* position: sticky; */
+      left: 0;
+      bottom: 0;
+      height: 70px;
+      width: 100%;
+  }
