@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 85vh;
+  height: 90vh;
 }
 
 
@@ -280,4 +280,16 @@ label:hover:before {
   color:white;
   font-weight: bold;
   font-family: 'Bitter', serif;
+}
+
+
+
+footer {
+  font-family: 'Bitter', serif;
+  font-size: 10px;
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
 }

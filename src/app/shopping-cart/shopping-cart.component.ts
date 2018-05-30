@@ -23,17 +23,17 @@ export class ShoppingCartComponent implements OnInit {
     private myActivated: ActivatedRoute ) { }
 
   ngOnInit() {
-    console.log("user in shopp component", this.user)
+    console.log('user in shopp component', this.user);
 
 
-    this.myService.isLoggedIn()
+    this.myService.isLoggedIn();
 
 
     this.myService.currentUser
-    .subscribe((theUser)=>{
-      console.log("user in shopping cart component", theUser)
-      this.user=theUser
-    })
+    .subscribe((theUser) => {
+      console.log('user in shopping cart component', theUser);
+      this.user = theUser;
+    });
     // this.myService.getTheCartContent(this.user);
     // this.myService.isLoggedIn()
     // .toPromise()

@@ -20,15 +20,15 @@ export class LoginComponent implements OnInit {
   constructor(private myService: OuthService, private myRouter: Router ) { }
 
   ngOnInit() {
-    this.myService.isLoggedIn()
+    this.myService.isLoggedIn();
 
 
     this.myService.currentUser
-    .subscribe((theUser)=>{
+    .subscribe((theUser) => {
       // console.log("user in app component", theUser)
-      this.user=theUser
-    })
-  
+      this.user = theUser;
+    });
+
   }
 
   login() {

@@ -37,5 +37,11 @@ body {
 }
 
 footer {
-  font-family: 'Marck Script', cursive;
+  font-family: 'Bitter', serif;
+  font-size: 10px;
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
 }

@@ -23,17 +23,17 @@ toggleForm() {
   constructor( private myService: OuthService, private myRouter: Router ) { }
 
   ngOnInit() {
-    console.log("user in user prof component", this.user)
+    console.log('user in user prof component', this.user);
 
 
-    this.myService.isLoggedIn()
+    this.myService.isLoggedIn();
 
 
     this.myService.currentUser
-    .subscribe((theUser)=>{
-      console.log("user in user component", theUser)
-      this.user=theUser
-    })
+    .subscribe((theUser) =>  {
+      console.log('user in user component', theUser);
+      this.user = theUser;
+    });
     // this.myService.isLoggedIn()
     // .toPromise()
     // .then(() => {
