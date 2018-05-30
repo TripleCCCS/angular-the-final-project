@@ -40,17 +40,17 @@ updateTheProduct(idOfProduct) {
 }
 
   ngOnInit() {
-    console.log("user in prod details component", this.user)
+    console.log('user in prod details component', this.user);
 
 
-    this.myAuth.isLoggedIn()
+    this.myAuth.isLoggedIn();
 
 
     this.myAuth.currentUser
-    .subscribe((theUser)=>{
-      console.log("user in product details component", theUser)
-      this.user=theUser
-    })
+    .subscribe((theUser) => {
+      console.log('user in product details component', theUser);
+      this.user = theUser;
+    });
     // this.myAuth.isLoggedIn()
     // .toPromise()
     // .then(() => {
