@@ -5,6 +5,7 @@ import 'rxjs/add/operator/catch';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 // import { Observable } from 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class OuthService {
 
 currentUser: BehaviorSubject<string> = new BehaviorSubject(null);
 temporaryUser: any;
+baseUrl: string = environment.apiUri;
 
   constructor( private http: Http) { }
 
@@ -21,43 +23,44 @@ temporaryUser: any;
   }
 
   signup(user) {
-    return this.http.post(`http://localhost:3000/signup`, user)
+    return this.http.post(`${this.baseUrl}/api/signup`, user)
       .map(res => {
-      res.json 
+      res.json();
       })
       .catch(this.handleError);
   }
 
   login(user) {
-    return this.http.post(`http://localhost:3000/login`, user, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/api/login`, user, { withCredentials: true })
       .map(res => {
-        this.currentUser.next(res.json())
-        res.json()
+        this.currentUser.next(res.json());
+        res.json();
       })
       .catch(this.handleError);
   }
 
   logout() {
-    return this.http.post(`http://localhost:3000/logout`, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/api/logout`, { withCredentials: true })
       .map(res => {
         this.currentUser.next(null);
-        res.json()})
+        res.json();
+      })
       .catch(this.handleError);
   }
 
   isLoggedIn() {
-    return this.http.get(`http://localhost:3000/loggedin`, { withCredentials: true })
+    return this.http.get(`${this.baseUrl}/api/loggedin`, { withCredentials: true })
       .map(res => {
-        console.log("loggedin being called", res);
+        console.log('loggedin being called', res);
         this.temporaryUser = res;
         this.currentUser.next(JSON.parse(this.temporaryUser._body));
-        console.log('user in service: ', this.currentUser)
+        console.log('user in service: ', this.currentUser);
     })
       .catch(this.handleError);
   }
 
   cardInfo(dataToSend) {
-    return this.http.post(`http://localhost:3000/creditinfo`, dataToSend, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/creditinfo`, dataToSend, { withCredentials: true })
     .map(res => {
       console.log('heyyyyy: ', res);
        res.json();
@@ -66,14 +69,14 @@ temporaryUser: any;
   }
 
   getTheCards() {
-    return this.http.get(`http://localhost:3000/creditcards`, { withCredentials: true })
+    return this.http.get(`${this.baseUrl}/creditcards`, { withCredentials: true })
     .map(res => res.json())
     .catch(this.handleError);
   }
 
   sendToShoppingCart(dataToSend) {
     console.log('whattt: ', dataToSend);
-    return this.http.post(`http://localhost:3000/cart`, dataToSend, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/cart`, dataToSend, { withCredentials: true })
     .map(res => {
       console.log('carttttt: ', res);
        res.json();
@@ -82,13 +85,13 @@ temporaryUser: any;
   }
 
   getTheCartContent(userId) {
-    return this.http.get(`http://localhost:3000/user/${userId}/cart`, { withCredentials: true })
+    return this.http.get(`${this.baseUrl}/user/${userId}/cart`, { withCredentials: true })
     .map(res => res.json())
     .catch(this.handleError);
   }
   removeFromShoppingCart(prodId) {
     console.log('data to send: ', prodId.prodId);
-    return this.http.post(`http://localhost:3000/cart/${prodId.prodId}/delete`, prodId, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/cart/${prodId.prodId}/delete`, prodId, { withCredentials: true })
     .map(res => {
       console.log('carttttt: ', res);
        res.json();

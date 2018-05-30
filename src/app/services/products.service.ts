@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { environment } from '../../environments/environment';
 
 
 
 
 @Injectable()
 export class ProductlistService {
+  baseUrl: string = environment.apiUri;
 
   getAllTheProducts(): any {
     throw new Error('Method not implemented.');
@@ -15,12 +17,12 @@ export class ProductlistService {
   constructor(private myHttp: Http) { }
 
   getAllProducts() {
-    return this.myHttp.get('http://localhost:3000/product/products')
+    return this.myHttp.get(`${this.baseUrl}/product/products`)
     .map((responseFromApi) => responseFromApi.json());
   }
 
   getOneProduct(theID: string) {
-    return this.myHttp.get(`http://localhost:3000/product/products/${theID}`)
+    return this.myHttp.get(`${this.baseUrl}/product/products/${theID}`)
     .map((responseFromApi) => responseFromApi.json());
   }
 
@@ -39,7 +41,7 @@ export class ProductlistService {
 
 
   updateProduct(theID, theUpdates) {
-    return this.myHttp.post(`http://localhost:3000/task/update/${theID}`, theUpdates)
+    return this.myHttp.post(`${this.baseUrl}/task/update/${theID}`, theUpdates)
     .map((responseFromApi) => responseFromApi.json());
   }
 

@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 export class ProductListComponent implements OnInit {
 
   allTheProducts: Array<any> = [];
-
-  searchTerm: String = '';
+  pattern: any;
+  // searchTerm: String = '';
 
   constructor(
     private myService: ProductlistService,

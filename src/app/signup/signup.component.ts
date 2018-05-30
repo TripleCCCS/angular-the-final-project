@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OuthService } from '../services/outh.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +15,7 @@ export class SignupComponent implements OnInit {
 
   error: any;
 
-  constructor(private myService: OuthService ) { }
+  constructor(private myService: OuthService, private myRouter: Router ) { }
 
   ngOnInit() {
   }
@@ -24,7 +25,9 @@ export class SignupComponent implements OnInit {
     this.myService.signup(this.formInfo)
       .subscribe(
         (user) => {this.user = user;
-          console.log(this.user);
+
+          console.log('yo: ', this.user);
+          this.myRouter.navigate(['/index']);
         },
         (err) => this.error = err
       );
