@@ -55,6 +55,7 @@ video {
 }
 #polina button:hover { 
    background: #F4C4BB;
+   border-radius: 2px;
 }
 
 a {
@@ -64,6 +65,7 @@ a {
   background:rgba(0,0,0,0.5);
   padding: .5rem;
   transition: .6s background; 
+  border-radius: 2px;
 }
 a:hover{
   background:rgba(0,0,0,0.9);

@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   formInfo: any = {name: '', password: '', email: '', address: '', city: '',  state: '', zip: ''};
 
-  user: any;
+  user: any = {};
 
   error: any;
 
@@ -27,15 +27,18 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("user in app component", this.user)
-    
+    // console.log("user in app component", this.user)
+
     this.myAuth.isLoggedIn()
-    this.myAuth.currentUser
-    .subscribe((theUser)=>{
-      console.log("user in app component", theUser)
-      this.user = theUser;
-    })
-  
+    .toPromise()
+    .then(() => {
+
+      this.myAuth.currentUser
+      .subscribe((theUser) => {
+        console.log('user in app component', theUser);
+        this.user = theUser;
+      });
+    });
   }
 
 

@@ -23,7 +23,7 @@ temporaryUser: any;
   signup(user) {
     return this.http.post(`http://localhost:3000/signup`, user)
       .map(res => {
-      res.json 
+      res.json();
       })
       .catch(this.handleError);
   }
@@ -31,8 +31,8 @@ temporaryUser: any;
   login(user) {
     return this.http.post(`http://localhost:3000/login`, user, { withCredentials: true })
       .map(res => {
-        this.currentUser.next(res.json())
-        res.json()
+        this.currentUser.next(res.json());
+        res.json();
       })
       .catch(this.handleError);
   }
@@ -41,17 +41,18 @@ temporaryUser: any;
     return this.http.post(`http://localhost:3000/logout`, { withCredentials: true })
       .map(res => {
         this.currentUser.next(null);
-        res.json()})
+        res.json();
+      })
       .catch(this.handleError);
   }
 
   isLoggedIn() {
     return this.http.get(`http://localhost:3000/loggedin`, { withCredentials: true })
       .map(res => {
-        console.log("loggedin being called", res);
+        console.log('loggedin being called', res);
         this.temporaryUser = res;
         this.currentUser.next(JSON.parse(this.temporaryUser._body));
-        console.log('user in service: ', this.currentUser)
+        console.log('user in service: ', this.currentUser);
     })
       .catch(this.handleError);
   }
