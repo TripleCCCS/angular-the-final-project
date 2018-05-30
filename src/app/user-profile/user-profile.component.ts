@@ -23,15 +23,26 @@ toggleForm() {
   constructor( private myService: OuthService, private myRouter: Router ) { }
 
   ngOnInit() {
-    this.myService.isLoggedIn()
-    .toPromise()
-    .then(() => {
-      // this.user = JSON.parse(this.myService.currentUser._body);
-      this.user = this.myService.currentUser;
+    console.log("user in user prof component", this.user)
 
-      console.log('user in the component: ', this.user);
+
+    this.myService.isLoggedIn()
+
+
+    this.myService.currentUser
+    .subscribe((theUser)=>{
+      console.log("user in user component", theUser)
+      this.user=theUser
     })
-    .catch();
+    // this.myService.isLoggedIn()
+    // .toPromise()
+    // .then(() => {
+    //   // this.user = JSON.parse(this.myService.currentUser._body);
+    //   this.user = this.myService.currentUser;
+
+    //   console.log('user in the component: ', this.user);
+    // })
+    // .catch();
     this.showTheCards();
   }
 
@@ -52,8 +63,8 @@ toggleForm() {
   showTheCards() {
     this.myService.getTheCards()
     .subscribe( arrayOfCards => {
+      console.log('cards in the component: ', arrayOfCards );
       this.cardsList = arrayOfCards;
-      // console.log('array in the component: ', arrayOfCards );
     });
   }
 

@@ -40,15 +40,26 @@ updateTheProduct(idOfProduct) {
 }
 
   ngOnInit() {
+    console.log("user in prod details component", this.user)
+
+
     this.myAuth.isLoggedIn()
-    .toPromise()
-    .then(() => {
-      this.user = this.myAuth.currentUser;
-      console.log('user in details page: ', this.user);
+
+
+    this.myAuth.currentUser
+    .subscribe((theUser)=>{
+      console.log("user in product details component", theUser)
+      this.user=theUser
     })
-    .catch( err => {
-      console.log('err in product details: ', err);
-    } );
+    // this.myAuth.isLoggedIn()
+    // .toPromise()
+    // .then(() => {
+    //   this.user = this.myAuth.currentUser;
+    //   console.log('user in details page: ', this.user);
+    // })
+    // .catch( err => {
+    //   console.log('err in product details: ', err);
+    // } );
 
     this.route.params
     .subscribe((theParams) => {

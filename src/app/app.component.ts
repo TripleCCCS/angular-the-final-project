@@ -5,7 +5,7 @@ import { FilterPipe } from '../app/pipes/filter.pipe';
 import { OuthService } from '../app/services/outh.service';
 import * as $ from 'jquery';
 import { Observable } from 'rxjs/Observable';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -23,20 +23,19 @@ export class AppComponent implements OnInit {
 
   title = 'app';
 
-  constructor( private myAuth: OuthService ) {
-
+  constructor( private myAuth: OuthService, private myRouter: Router ) {
   }
 
   ngOnInit() {
+    console.log("user in app component", this.user)
+    
     this.myAuth.isLoggedIn()
-    .toPromise()
-    .then( () => {
-      this.user = this.myAuth.currentUser;
-      console.log('helloooooooo: ', this.user.name);
-    } )
-    .catch( err => {
-      console.log('error in app comp: ', err);
-    });
+    this.myAuth.currentUser
+    .subscribe((theUser)=>{
+      console.log("user in app component", theUser)
+      this.user = theUser;
+    })
+  
   }
 
 
