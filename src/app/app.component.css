@@ -1,11 +1,11 @@
 
-
+/* 
  nav{
   background-color:  #ffb3b3;
   border: #ff9999;
   width: 100%;
 
-}
+} */
 
 
 /*
@@ -37,5 +37,22 @@ body {
 }
 
 footer {
-  font-family: 'Marck Script', cursive;
+  font-family: 'Bitter', serif;
+  font-size: 10px;
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+}
+
+.collapse {
+  visibility: visible;
+}
+
+
+.navbar[_ngcontent-c0] > .container[_ngcontent-c0], .navbar[_ngcontent-c0] > .container-fluid[_ngcontent-c0] {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

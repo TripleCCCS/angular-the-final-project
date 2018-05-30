@@ -14,3 +14,13 @@ body, html {
 .cartRow{
 padding: 2%;
 } */
+
+footer {
+  font-family: 'Bitter', serif;
+  font-size: 10px;
+  position: relative;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+}
