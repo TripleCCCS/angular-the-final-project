@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 // import { Observable } from 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
 
@@ -10,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class OuthService {
 
-currentUser: any;
+currentUser: BehaviorSubject<string> = new BehaviorSubject(null);
 temporaryUser: any;
 
   constructor( private http: Http) { }
@@ -21,29 +22,36 @@ temporaryUser: any;
 
   signup(user) {
     return this.http.post(`http://localhost:3000/signup`, user)
-      .map(res => res.json())
+      .map(res => {
+      res.json 
+      })
       .catch(this.handleError);
   }
 
   login(user) {
     return this.http.post(`http://localhost:3000/login`, user, { withCredentials: true })
-      .map(res => res.json())
+      .map(res => {
+        this.currentUser.next(res.json())
+        res.json()
+      })
       .catch(this.handleError);
   }
 
   logout() {
     return this.http.post(`http://localhost:3000/logout`, { withCredentials: true })
-      .map(res => res.json())
+      .map(res => {
+        this.currentUser.next(null);
+        res.json()})
       .catch(this.handleError);
   }
 
   isLoggedIn() {
     return this.http.get(`http://localhost:3000/loggedin`, { withCredentials: true })
       .map(res => {
+        console.log("loggedin being called", res);
         this.temporaryUser = res;
-        this.currentUser = JSON.parse(this.temporaryUser._body);
-        console.log('user in service: ', this.currentUser),
-        res.json();
+        this.currentUser.next(JSON.parse(this.temporaryUser._body));
+        console.log('user in service: ', this.currentUser)
     })
       .catch(this.handleError);
   }
