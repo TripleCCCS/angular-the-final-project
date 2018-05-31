@@ -32,7 +32,7 @@
   
       <div class="cardsForm" *ngIf = "isFormShowing">
           <div class="row">
-            <aside >
+            <aside>
           
           
           <article class="card">
@@ -50,7 +50,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fa fa-user"></i></span>
             </div>
-            <input type="text" class="form-control" id="cname"name="cardname" placeholder="Mary Jane Parker" [(ngModel)]="newCard.cardname">
+            <input type="text" [(ngModel)]="newCard.cardname" class="form-control" name="cname" placeholder="Mary Jane Parker">
           </div> <!-- input-group.// -->
           </div> <!-- form-group.// -->
           
@@ -137,6 +137,7 @@
       
             </aside>
   </div>
+  </div>
 
 
 
@@ -184,12 +185,12 @@
     </form> -->
     
   <div class="saved-cards">
-      <h3>Your Saved Cards</h3>
+      <a class="branding">Your Saved Cards</a>
       <div *ngFor="let oneCard of cardsList">
-        <h3>Name: {{oneCard.name}}</h3>
-        <h6>Credit Card Number: {{oneCard.cardnumber}}</h6>
-        <h6>Exp: {{oneCard.cardexp}}</h6>
-        <h6>CVV: {{oneCard.cvv}}</h6>
+        <p>Name: {{oneCard.name}}</p>
+        <p>Credit Card Number: {{oneCard.cardnumber}}</p>
+        <p>Exp: {{oneCard.cardexp}}</p>
+        <p>CVV: {{oneCard.cvv}}</p>
       </div>
   </div>
  
