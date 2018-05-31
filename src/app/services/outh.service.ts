@@ -76,7 +76,7 @@ baseUrl: string = environment.apiUri;
 
   sendToShoppingCart(dataToSend) {
     console.log('whattt: ', dataToSend);
-    return this.http.post(`${this.baseUrl}/cart`, dataToSend, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/api/cart`, dataToSend, { withCredentials: true })
     .map(res => {
       console.log('carttttt: ', res);
        res.json();
@@ -85,13 +85,13 @@ baseUrl: string = environment.apiUri;
   }
 
   getTheCartContent(userId) {
-    return this.http.get(`${this.baseUrl}/user/${userId}/cart`, { withCredentials: true })
+    return this.http.get(`${this.baseUrl}/user/${userId}/api/cart`, { withCredentials: true })
     .map(res => res.json())
     .catch(this.handleError);
   }
   removeFromShoppingCart(prodId) {
     console.log('data to send: ', prodId.prodId);
-    return this.http.post(`${this.baseUrl}/cart/${prodId.prodId}/delete`, prodId, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/api/cart/${prodId.prodId}/delete`, prodId, { withCredentials: true })
     .map(res => {
       console.log('carttttt: ', res);
        res.json();
