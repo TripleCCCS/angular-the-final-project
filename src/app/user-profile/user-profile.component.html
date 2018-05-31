@@ -15,18 +15,21 @@
 
 <div class="header">
     <div class="top-left">
-      <a class="branding">{{user.name}}</a>
-      <p>welcome back babes</p>
+      <a class="theBrandingTitle">{{user.name}}</a>
+      <p class="welcome">welcome back babes</p>
+      <hr>
     </div>
     <div class="top-right">
-    <div class="item"><img class="image" src="../../assets/Images/User-profile.jpg"/></div>
+    <div class="item">
+      <img class="image" src="../../assets/Images/User-profile.jpg"/>
+    </div>
   </div>
   </div>
   <div class="gallery">
   <div class="item">
        
     <div *ngIf="user">
-    <p>Prefer easy check-out? 
+    <p class="EZcheckOut">Prefer easy check-out? 
       <br>Add a Payment Method:
     <p><button (click)="toggleForm()" type="button">Add a card </button>
   
@@ -37,9 +40,9 @@
           
           <article class="card">
           <div class="card-body p-5">
-          <p> <img src="http://bootstrap-ecommerce.com/main/images/icons/pay-visa.png"> 
-            <img src="http://bootstrap-ecommerce.com/main/images/icons/pay-mastercard.png"> 
-             <img src="http://bootstrap-ecommerce.com/main/images/icons/pay-american-ex.png">
+          <p> <img class="creditCards" src="http://bootstrap-ecommerce.com/main/images/icons/pay-visa.png"> 
+            <img class="creditCards" src="http://bootstrap-ecommerce.com/main/images/icons/pay-mastercard.png"> 
+             <img class="creditCards" src="http://bootstrap-ecommerce.com/main/images/icons/pay-american-ex.png">
           </p>
           
           
@@ -109,12 +112,25 @@
                     <option>01 - January</option>
                     <option>02 - February</option>
                     <option>03 - March</option>
+                    <option>04 - April</option>
+                    <option>05 - May</option>
+                    <option>06 - June</option>
+                    <option>07 - July</option>
+                    <option>08 - August</option>
+                    <option>09 - September</option>
+                    <option>10 - October</option>
+                    <option>11 - November</option>
+                    <option>12 - December</option>
                   </select>
                         <span style="width:10%; text-align: center"> / </span>
                         <select class="form-control" style="width:45%">
                     <option>YY</option>
                     <option>2018</option>
                     <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
                   </select>
                     </div>
                   </div>
@@ -140,57 +156,17 @@
   </div>
 
 
-
-        
-        
-    
-        <!--container end.//--> 
-  <!-- <form class="cardsForm"  *ngIf = "isFormShowing">
-  <form class="cardsForm"  *ngIf = "isFormShowing">
-      <label for="fname">Accepted Cards</label>
-      <div class="icon-container">
-        <i class="fa fa-cc-visa" style="color:navy;"></i>
-        
-        <i class="fa fa-cc-amex" style="color:blue;"></i>
-        <i class="fa fa-cc-mastercard" style="color:red;"></i>
-        <i class="fa fa-cc-discover" style="color:orange;"></i>
-      </div>
-      <label for="cname">Name on Card</label>
-      <input type="text" id="cname" [(ngModel)]="newCard.cardname" name="cardname" placeholder="John More Doe">
-      <br>
-      <label for="ccnum">Credit card number</label>
-      <input type="text" id="ccnum" [(ngModel)]="newCard.cardnumber" name="cardnumber" placeholder="1111-2222-3333-4444">
-      <br>
-      <label for="expmonth">Expiration</label>
-      <input type="text" id="expmonth" [(ngModel)]="newCard.cardexp" name="cardexp" placeholder="September">
-        <br>
-          <label for="cvv">CVV</label>
-          <input type="text" id="cvv" [(ngModel)]="newCard.cvv" name="cvv" placeholder="352">
-          <br>
-          <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-          <input type="text" id="adr"  [(ngModel)]="newCard.mailing_address" name="mailing_address" placeholder="542 W. 15th Street" required="required">
-          <br>
-          <label for="city"><i class="fa fa-institution"></i> City</label>
-          <input type="text" id="city" [(ngModel)]="newCard.city" name="city" placeholder="New York" required="required">
-          <br>
-          <label for="state">State</label>
-          <input type="text" id="state" [(ngModel)]="newCard.state" name="state" placeholder="NY" required="required">
-          <br>
-        <label for="zip">Zip</label>
-        <input type="text" id="zip" [(ngModel)]="newCard.zip" name="zip" placeholder="10001" required="required">
-      <br>
-      <br>
-      <button type="button" (click)="addNewCard(newCard)" >Submit</button>
-      <br>
-    </form> -->
     
   <div class="saved-cards">
-      <a class="branding">Your Saved Cards</a>
+      <a class="branding">Saved Cards</a>
       <div *ngFor="let oneCard of cardsList">
         <p>Name: {{oneCard.name}}</p>
         <p>Credit Card Number: {{oneCard.cardnumber}}</p>
         <p>Exp: {{oneCard.cardexp}}</p>
         <p>CVV: {{oneCard.cvv}}</p>
+        <br>
+        <hr>
+        <br>
       </div>
   </div>
  

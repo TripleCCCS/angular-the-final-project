@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Cardo|Roboto:300,400');
 body {
-  background: #fcfcfc;
+  /* background: #fcfcfc; */
   margin: 0 1em;
   box-sizing: border-box;
+  height: 100vh;
+  widows: 100px;
+  background-color: #FAF7F4;
+}
+
+hr {
+  width: 45%;
+  /* padding-left: -25%; */
+  margin-left: -3%;
 }
 .header {
   width: 100%;
@@ -17,12 +26,21 @@ body {
 }
 .branding {
   font-family: 'Roboto', sans-serif;
-  font-size: 3em;
-  text-decoration: none;
+  font-size: 2em;
   color: #707070;
   font-weight: 300;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
+
+.theBrandingTitle{
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.6em;
+  color: #707070;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+
 .branding:hover {
   color: #a0d5ef;
   transition: all 0.2s ease;
@@ -30,11 +48,11 @@ body {
 p {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 2px;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .top-right {
   margin-top: 45px;
-  margin-right: 50px;
+  margin-right: 80px;
 }
 .header-nav li {
   list-style-type: none;
@@ -60,7 +78,8 @@ p {
 }
 .image {
   height: 500px;
-  margin-right: 50px;
+  padding-right: 50px;
+  padding-top: 42%;
 }
 .footer {
   margin: 3em 0;
@@ -80,4 +99,19 @@ p {
 .social li a:hover {
   color: #a0d5ef;
   transition: all 0.3s ease-out;
+}
+
+.welcome {
+  font-size: 1em;
+}
+
+.saved-cards {
+  padding-top: 6%;
+}
+
+
+.EZcheckOut {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1em;
 }
