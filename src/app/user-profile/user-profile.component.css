@@ -1,98 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo|Roboto:300,400');
 body {
-  padding-top: 10%;
-  font-family: 'Bitter', serif;
+  background: #fcfcfc;
+  margin: 0 1em;
+  box-sizing: border-box;
 }
-
-.carousel-inner .carouselImg {
-  /* width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%; */
-  width: auto;
-  position: fixed;
-  height: auto;
-  z-index: -100;
+.header {
+  width: 100%;
+  height: 140px;
+  display: grid;
+  grid-template-columns: 80% 20%;
 }
-
-/* .saved-cards {
-
-} */
-
-body {
-  margin: 0;
-  background: #000; 
+/* navigation */
+.top-left {
+  margin-top: 50px;
+  margin-left: 50px;
 }
-/* video { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-} */
-
-/* .stopfade { 
-   opacity: .5;
-} */
-
-#polina { 
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100; 
-  background: rgba(0,0,0,0.3);
-  color: white;
-  padding: 2rem;
-  width: 33%;
-  margin:2rem;
-  float: right;
-  font-size: 1.2rem;
-  z-index: 100;
-}
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-#polina button { 
-  display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none; 
-  margin: 1rem auto; 
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #fff;
-  border-radius: 3px; 
-  cursor: pointer;
-  transition: .3s background;
-}
-#polina button:hover { 
-   background: rgba(0,0,0,0.5);
-}
-
-a {
-  display: inline-block;
-  color: #fff;
+.branding {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
   text-decoration: none;
-  background:rgba(0,0,0,0.5);
-  padding: .5rem;
-  transition: .6s background; 
+  color: #707070;
+  font-weight: 300;
+  letter-spacing: 5px;
 }
-a:hover{
-  background:rgba(0,0,0,0.9);
+.branding:hover {
+  color: #a0d5ef;
+  transition: all 0.2s ease;
 }
-@media screen and (max-width: 500px) { 
-  div{width:70%;} 
+p {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.8em;
 }
-@media screen and (max-device-width: 800px) {
-  html { background: url() #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
+.top-right {
+  margin-top: 45px;
+  margin-right: 50px;
+}
+.header-nav li {
+  list-style-type: none;
+  padding: 5px;
+  text-decoration: none;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 1px;
+}
+.header-nav li:hover {
+  color: #a0d5ef;
+  transition: all 0.2s ease;
+}
+.gallery {
+  margin: 50px;
+  display: grid;
+  grid-auto-columns: 33.3%;
+  grid-gap: 5px;
+}
+.image {
+  height: 500px;
+  margin-right: 50px;
+}
+.footer {
+  margin: 3em 0;
+}
+.social {
+  list-style-type: none;
+  display: block;
+}
+.social li {
+  display: inline;
+  padding: 13px;
+}
+.social li a {
+  color: #000;
+  font-size: 1.2em;
+}
+.social li a:hover {
+  color: #a0d5ef;
+  transition: all 0.3s ease-out;
 }
