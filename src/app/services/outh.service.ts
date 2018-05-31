@@ -60,7 +60,7 @@ baseUrl: string = environment.apiUri;
   }
 
   cardInfo(dataToSend) {
-    return this.http.post(`${this.baseUrl}/creditinfo`, dataToSend, { withCredentials: true })
+    return this.http.post(`${this.baseUrl}/api/creditinfo`, dataToSend, { withCredentials: true })
     .map(res => {
       console.log('heyyyyy: ', res);
        res.json();
