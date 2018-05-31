@@ -2,9 +2,22 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+<script src="https://use.fontawesome.com/c560c025cf.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<script src="https://use.fontawesome.com/c560c025cf.js"></script>
+<div *ngIf="cartList.length === 0">
+        <p>No products in your shopping cart.</p>
+        </div>
+
+<br>
+<Br>
+<br>
+<br>
+<br>
+<Br><br>    
+
+
+
 <div class="container" *ngIf="cartList.length > 0">
    <div class="card shopping-cart">
             <div class="card-header bg-light text-dark">
@@ -92,9 +105,7 @@
 <!-- delete for clauds -->
 
 
-<div *ngIf="cartList.length === 0">
-<p>No products in your shopping cart.</p>
-</div>
+
 
 
 <!-- <div>
@@ -124,8 +135,7 @@
 <br>
 <br>
 <br>
-<br>
-<br>
+
 
 
 
