@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
         (user) => {this.user = user;
 
           console.log('yo: ', this.user);
-          this.myRouter.navigate(['/index']);
+          this.myRouter.navigate(['/login']);
         },
         (err) => this.error = err
       );
