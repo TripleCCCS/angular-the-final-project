@@ -60,6 +60,7 @@ export class ShoppingCartComponent implements OnInit {
 
 
   showTheCart(userId) {
+    this.quantityProduct = [];
     this.myService.getTheCartContent(userId)
     .subscribe( arrayOfProducts => {
       this.cartList = arrayOfProducts;
@@ -101,7 +102,10 @@ export class ShoppingCartComponent implements OnInit {
     this.myService.removeFromShoppingCart(data)
     .toPromise()
     .then(() => {
-      this.myRouter.navigate(['/user', product._id, 'cart']);
+      this.ngOnInit();
+      // console.log('blahhhhhhhblehbliiiihhhhh', this.user);
+      // this.showTheCart(this.user._id);
+      // this.myRouter.navigate(['/user', product._id, 'cart']);
     })
     .catch( err => {
       console.log('err in deleteFromCart: ', err);
